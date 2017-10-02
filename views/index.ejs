@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%= pageTitle %></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+</head>
+<body>
+  <div class="container">
+    <form action='/posting' method='post'>
+      <div class="row">
+        <div class="six columns">
+          <label for="email">Email</label>
+          <input class="u-full-width" type="email" placeholder="test@mailbox.com" name='email' id="email">
+        </div>
+        <div class="six columns">
+          <label for="reason">Reason for contact</label>
+          <select class="u-full-width" id="reason" name='reason'>
+            <option>Questions</option>
+            <option>Admiration</option>
+            <option>Can I get your number?</option>
+          </select>
+        </div>
+      </div>
+      <label for="message">Message</label>
+      <textarea class="u-full-width" placeholder="Hi Dave …" id="message" name='message'></textarea>
+      <input class="button-primary" type="submit" value="Submit" id='submitButton'>
+    </form>
+  </div>
+
+  <script src='bundle.js'></script>
+</body>
+</html>
